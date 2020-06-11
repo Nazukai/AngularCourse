@@ -1,0 +1,15 @@
+<div class="course-card" [ngClass]="cardClasses()">
+
+  <div class="course-title">
+    {{ cardIndex + ' ' + course.description }}
+  </div>
+  <img width="300" alt="Angular Logo" *ngIf="course.iconUrl"
+       [src]="course.iconUrl">
+
+  <div class="course-description">
+    {{ course.longDescription }}
+  </div>
+
+  <button (click)="onCourseViewed()">View Course</button>
+
+</div>
